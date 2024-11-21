@@ -1,6 +1,10 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+
+	"example.com/webservice/models"
+)
 
 func main() {
 	// println("dede")
@@ -58,4 +62,38 @@ func main() {
 
 	// struct datatypes
 	fmt.Println("===== structs =====")
+
+	type user1 struct {
+		ID        int
+		FirstName string
+		LastName  string
+	}
+
+	var u user1
+	u.ID = 1
+	u.FirstName = "Deepak"
+	u.LastName = "Dargade"
+	fmt.Println(u)
+	// fmt.Println(u.FirstName)
+
+	u2 := user1{ID: 2, FirstName: "Nima", LastName: "Dargade"}
+	fmt.Println(u2)
+
+	u3 := user1{
+		ID:        3,
+		FirstName: "Tanvi",
+		LastName:  "Dargade",
+	}
+	fmt.Println(u3)
+
+	fmt.Println("welcome")
+
+	// use User module
+
+	user := models.User{
+		ID:        2,
+		FirstName: "Deepak",
+	}
+	fmt.Println(user)
+
 }
