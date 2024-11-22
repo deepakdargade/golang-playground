@@ -96,4 +96,17 @@ func main() {
 	}
 	fmt.Println(user)
 
+	// functions demo
+
+	port := 3000
+	_, err := startWebServer(port, 3)
+	fmt.Println(port, err)
+}
+
+func startWebServer(port, numberOfRetires int) (int, error) {
+	fmt.Println("Starting the Server on port:", port)
+	fmt.Println("// loading, retries //", numberOfRetires)
+	fmt.Println("Server started on port:", port)
+	// errors.New("something went wrong")
+	return port, nil
 }
